@@ -48,15 +48,27 @@ h1{
   color: transparent;
 
   font-size: 40px;
+  
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: white;
+   
 }
+.heading {
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(78, 78, 76, 0.829);
+  width: 60%;
+  text-align: center;
+}
+select option[data-default] {
 
+  display: none;
+}
 select {
 
-  padding: 10px 30px 10px 5px;
+  padding: 10px 10px 10px 5px;
   width: 80%;
-  margin: 20px;
+  margin: 10px 30px;
   border-radius: 10px;
   
 }
@@ -65,7 +77,10 @@ select {
   text-align: center;
 }
 button {
-  padding: 40px;
-  margin: 20px;
+  padding: 5px;
+  font-size: 25px;
+  margin: 15px;
   width: 20%;
+  color: white;
+  background-color: rgb(68, 63, 63);
 }

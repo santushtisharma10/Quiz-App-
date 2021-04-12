@@ -41,23 +41,27 @@ body {
 
   background-image: url("quiz-bg.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  font-family: cursive;
 }
 h1{
   text-align: center;
-  color: transparent;
-
+/*  color: transparent;
+*/
   font-size: 40px;
-  
+  /*
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: white;
+   */
    
 }
 .heading {
   margin: auto;
   padding: 10px;
-  background-color: rgba(78, 78, 76, 0.829);
+  background-color: rgba(224, 224, 214, 0.829);
+  opacity: 1;
   width: 60%;
+  height: 500px;
   text-align: center;
 }
 select option[data-default] {

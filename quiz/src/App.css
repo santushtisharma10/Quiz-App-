@@ -1,90 +1,35 @@
-/*.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
-body {
-
-  background-image: url("quiz-bg.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  font-family: cursive;
-}
-h1{
-  text-align: center;
-/*  color: transparent;
-*/
-  font-size: 40px;
-  /*
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: white;
-   */
-   
-}
-.heading {
-  margin: auto;
-  padding: 10px;
-  background-color: rgba(224, 224, 214, 0.829);
-  opacity: 1;
-  width: 60%;
-  height: 500px;
-  text-align: center;
-}
-select option[data-default] {
-
-  display: none;
-}
-select {
-
-  padding: 10px 10px 10px 5px;
-  width: 80%;
-  margin: 10px 30px;
-  border-radius: 10px;
+.main {
   
+  display: flex;
+  justify-content: center;
 }
-.col-12 {
+.card1 {
 
-  text-align: center;
+  height: 600px;
+  width: 70%;
+  
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+text-align: center;
+padding: 20px;
+ 
 }
-button {
-  padding: 5px;
-  font-size: 25px;
-  margin: 15px;
-  width: 20%;
-  color: white;
-  background-color: rgb(68, 63, 63);
+h1 {
+
+  font-size: 100px;
 }
+.glow {
+  color: #FFFFFF;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  color: #FFFFFF;
+  
+ }
+
+ button {
+   background-color: yellowgreen;
+  padding: 10px;
+ }

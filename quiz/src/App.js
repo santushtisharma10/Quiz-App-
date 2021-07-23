@@ -4,14 +4,16 @@ import React from "react"
 
 function App() {
   return (
-    <div>
-      <div className="heading">
-        <h1>Welcome to the quiz app <br />Choose the correct fields and start the quiz</h1>
-
+    <div className="main">
+      <div className="card1">
+        <br />
+        <br />
+        <h1 className="glow">Quizzy</h1>
+        <br />
+        <button >Enter to get started</button>
       </div>
     
-      {/* */}
-
+      {/*Comments */}
 
 
     </div>

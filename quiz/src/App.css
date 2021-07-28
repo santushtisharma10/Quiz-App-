@@ -2,12 +2,15 @@
   
   display: flex;
   justify-content: center;
+  
+  margin: 15px;
+  
 }
 .card1 {
 
   height: 600px;
-  width: 70%;
-  
+  width: 80%;
+  font-family: cursive;
   background: rgba( 255, 255, 255, 0.25 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 4px );
@@ -15,21 +18,26 @@ backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 text-align: center;
-padding: 20px;
+padding-top: 2px;
+margin: 2px;
  
 }
-h1 {
+.tagline {
 
-  font-size: 100px;
+  color:white;
 }
 .glow {
+  font-size: 120px;
   color: #FFFFFF;
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb(20, 20, 20), 0 0 30px rgb(20, 20, 20), 0 0 40px rgb(20, 20, 20), 0 0 55px rgb(20, 20, 20), 0 0 75px rgb(20, 20, 20);
   color: #FFFFFF;
+  
   
  }
 
  button {
-   background-color: yellowgreen;
+   background-color: rgb(20, 20, 20);
+   color: white;
+   font-size: 25px;
   padding: 10px;
  }

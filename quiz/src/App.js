@@ -1,34 +1,14 @@
 import './App.css';
 import React from "react";
+import Card from './components/card';
 
 function App() {
   return (
 
-    <div className="main">
+    <div>
       
-      <div className="card1">
+      <Card />
       
-          <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <h1 className="glow">Quizzy</h1>
-        <br />
-
-        <h1 className="tagline">A good day to Quiz hard</h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      
-        <button >Enter to get started</button>
-    </div>
-      
-      {/*Comments */}
-
-
     </div>
 
   );

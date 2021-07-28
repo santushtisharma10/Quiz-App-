@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react"
+import React from "react";
 
 function App() {
   return (
@@ -7,6 +7,8 @@ function App() {
     <div className="main">
       
       <div className="card1">
+      
+          <br />
         <br />
         <br />
         <br />
@@ -15,15 +17,15 @@ function App() {
         <br />
 
         <h1 className="tagline">A good day to Quiz hard</h1>
-        
+        <br />
         <br />
         <br />
         <br />
         <br />
       
         <button >Enter to get started</button>
-      </div>
-    
+    </div>
+      
       {/*Comments */}
 
 

@@ -3,19 +3,20 @@ import "./card.css"
 
 
 export default Card
-function Card() {
+function Card({vis, setVis}) {
   
     const[enter, setEnter] = useState("visible")
     
     useEffect(() => {
-      console.log(enter)
+      
+      
+      //console.log(enter)
+      
     }, [])
 
     return (
 
-        <div className="main">
-          
-          <div className="card1">
+       
           <div className="text" style={{display: enter}}>
               <br />
             <br />
@@ -32,14 +33,10 @@ function Card() {
             <br />
             <br />
           
-            <button type="button" onClick={()=> setEnter("none")}>Enter to get started</button>
-            
-        </div>
-        </div>
-          
+            <button type="button" onClick={()=> {
+              setEnter("none")
+              setVis("visible")}}>Enter to get started</button>         
         
-    
-    
         </div>
         
      

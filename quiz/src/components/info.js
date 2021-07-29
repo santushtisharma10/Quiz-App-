@@ -1,18 +1,20 @@
-import React,{useState} from "react"
+import React, { useState } from "react"
 
-export default function info() {
+export default function Info() {
 
-    {/* variables to store the info like category, type, number of questions, level*/}
+  {/* variables to store the info like category, type, number of questions, level*/ }
 
-    return (
+  var diff, catg, ques, type
 
-        <div>
+  return (
 
-        </div>
-    )
-}
-{/*
-    <div className="row padding">
+    <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br/>
+      <div className="row padding">
 
         <div className="col-md-3">
           <select name="difficulty">
@@ -49,7 +51,7 @@ export default function info() {
             <option value="26">Celebrities</option>
             <option value="27">Animals</option>
             <option value="28">Vehicles</option>
-            
+
           </select>
         </div>
         <div className="col-md-3">
@@ -71,4 +73,9 @@ export default function info() {
           <button >Submit</button>
         </div>
       </div>
+    </div>
+  )
+}
+{/*
+   
  */}

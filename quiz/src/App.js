@@ -3,7 +3,7 @@ import React,{useState, useEffect} from "react";
 import Card from './components/card';
 import Ques from './components/ques';
 import Info from './components/info';
-
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 function App() {
   
   
@@ -16,17 +16,18 @@ function App() {
   }, [vis])
   return (
 
-    
-       <div className="main">
-          
-        <div className="card1">
-        
-        <Card vis={vis} setVis={setVis}/>
+       <div>
+         <Router>
+         <Switch>
+         <Route path="/" exact component={Card}/>
+         <Route path="/info" component={Info}/>
+         <Route path="/ques" component={Ques}/>
+         </Switch>
+         </Router>
+         
+       </div>
       
-        {vis === "visible" && <Info />}
-        </div>
-        </div>
-     
+      
 
       
     

@@ -4,7 +4,8 @@ export default function Ques() {
 
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>Hello this is ques page</h1>
+
             {/* 
             1.create an array of question 
             2. api example:https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple

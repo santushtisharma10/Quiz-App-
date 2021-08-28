@@ -18,13 +18,13 @@ export default function Ques() {
         console.log(ques)
     }, [ques])
 
-    return (
+    return ques.length > 0 && (
         <div className="container">
 
             <div className="row">
                 <div className="col-12">
                     <div className="option">
-                      TEsting purposes
+                        TEsting purposes
                     </div>
                 </div>
 
@@ -33,18 +33,18 @@ export default function Ques() {
             <div className="row">
                 <div className="col-md-6" >
                     <div className="option">
-                        kaka kutta hai
+                        kaka
                     </div>
-                 </div>
-                 
+                </div>
+
                 <div className="col-md-6" >
                     <div className="option">
-                        kaka harami hai
+                        kaka 
                     </div>
                 </div>
                 <div className="col-md-6" >
                     <div className="option">
-                        kaka kamina hai
+                        kaka
                     </div>
                 </div>
 
@@ -53,10 +53,10 @@ export default function Ques() {
                         all of the above
                     </div>
                 </div>
-                </div>
-                
+            </div>
 
-            
+
+
             {/* 
             1.create an array of question 
             2. api example:https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple

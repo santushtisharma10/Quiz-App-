@@ -21,9 +21,8 @@ function Card({vis, setVis}) {
             <br />
             <h1 className="glow">Quizzy</h1>
             <br />
-    
-            <h1 className="tagline">A good day to Quiz hard</h1>
             <br />
+            <h1 className="tagline">A good day to Quiz hard</h1>
             <br />
             <br />
             <br />

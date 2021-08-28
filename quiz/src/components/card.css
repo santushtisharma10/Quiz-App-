@@ -6,7 +6,10 @@
   margin: 15px;
   
 }
+.tagline {
 
+  color: pink;
+}
 
 .card1 {
 
@@ -25,22 +28,18 @@ margin: 2px;
 
  
 }
-  .tagline {
-  
-    color: white;
-  
-  }
+ 
   .glow {
     font-size: 120px;
     color: #FFFFFF;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb(20, 20, 20), 0 0 30px rgb(20, 20, 20), 0 0 40px rgb(20, 20, 20), 0 0 55px rgb(20, 20, 20), 0 0 75px rgb(20, 20, 20);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb(255,182,193), 0 0 30px rgb(255,182,193), 0 0 40px rgb(255,182,193), 0 0 55px rgb(255,182,193), 0 0 75px rgb(255,182,193);
     color: #FFFFFF;
     
     
    }
   
    button {
-     background-color: rgb(20, 20, 20);
+     background-color: purple;
      color: white;
      font-size: 25px;
     padding: 10px;

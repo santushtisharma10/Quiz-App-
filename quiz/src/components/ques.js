@@ -1,66 +1,40 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
+import Confetti from "react-confetti";
+import QuesList from "./QuesList";
 
 import "./ques.css"
 
+const url = "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"
+
 export default function Ques() {
 
-    const url = "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"
+    
     const [ques, setQues] = useState([])
+
     useEffect(() => {
 
         fetch(url)
-            .then(res => res.json())
-            .then(data => {
+            .then((res) => res.json())
+            .then((data) => {
 
                 setQues(data.results)
             })
 
         console.log(ques)
-    }, [ques])
+    }, [])
 
-    return ques.length > 0 && (
+    return ques.length > 0 ? (
         <div className="container">
-
-            <div className="row">
-                <div className="col-12">
-                    <div className="option">
-                        TEsting purposes
-                    </div>
-                </div>
-
-            </div>
-            <br />
-            <div className="row">
-                <div className="col-md-6" >
-                    <div className="option">
-                        kaka
-                    </div>
-                </div>
-
-                <div className="col-md-6" >
-                    <div className="option">
-                        kaka 
-                    </div>
-                </div>
-                <div className="col-md-6" >
-                    <div className="option">
-                        kaka
-                    </div>
-                </div>
-
-                <div className="col-md-6" >
-                    <div className="option">
-                        all of the above
-                    </div>
-                </div>
-            </div>
-
-
+            <Confetti width={window.innerWidth}  height={window.innerHeight} opacity={0}/>
+            <QuesList data={ques[0]}/>
 
             {/* 
             1.create an array of question 
             2. api example:https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple
             */}
-        </div>
+        </div> 
+    ): (
+        <h1>Loading..</h1>
     )
+
 }

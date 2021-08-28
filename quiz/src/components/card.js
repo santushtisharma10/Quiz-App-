@@ -28,8 +28,9 @@ function Card({vis, setVis}) {
             <br />
             <br />
             <br />
+            {/*set link to info page*/}
           
-            <button type="button">Enter to get started</button>         
+            <a href="http://localhost:3000/info"><button type="button">Enter to get started</button> </a>        
         
         </div>
         

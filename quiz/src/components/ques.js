@@ -4,7 +4,7 @@ export default function Ques() {
 
     return (
         <div>
-            <h1>Hello this is ques page</h1>
+            <h1 style={{color: "white"}}>Ques Section</h1>
 
             {/* 
             1.create an array of question 

@@ -3,12 +3,13 @@ import React, { useState } from "react"
 export default function Info() {
 
   {/* variables to store the info like category, type, number of questions, level*/ }
-
-  var diff, catg, ques, type
+{/*improve the page overall and add navigation to ques page */}
+  var diff, catg, ques, type;
 
   return (
 
     <div>
+      <form action="http://localhost:3000/ques">
       <br />
       <br />
       <br />
@@ -70,10 +71,12 @@ export default function Info() {
         </div>
         <br /><br />
         <div class="col-12">
-          <button >Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </div>
+      </form>
     </div>
+  
   )
 }
 {/*

@@ -13,7 +13,6 @@ export default function Ques() {
     const [ans, setAns] = useState(0)
     const [index, setIndex] = useState(0)
     const [end, setEnd] = useState(false)
-    const [val, setValue] = useState(0)
 
     useEffect(() => {
 
@@ -37,11 +36,11 @@ export default function Ques() {
         }
         const newIdx = index+1
         setIndex(newIdx)
-
+        
         if(newIdx >= ques.length) {
 
             setEnd(true)
-            setValue(1)
+
             console.log("end");
             
         }
@@ -50,10 +49,11 @@ export default function Ques() {
 
     return end ? (<div>
         <h2>End reached, Your score is {ans}</h2>
+        <Confetti width={window.innerWidth}  height={window.innerHeight} />
     </div>) : ques.length > 0 ? (
         <div className="container">
             
-            <QuesList data={ques[index]} handleAns={handleAns} val={val}/>
+            <QuesList data={ques[index]} handleAns={handleAns} />
             {/* 
             1.create an array of question 
             2. api example:https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple

@@ -2,9 +2,10 @@ import React from "react";
 import "./ques.css"
 import Confetti from "react-confetti"
 
-export default function QuesList({ handleAns, data: { question, correct_answer, incorrect_answers }, val}) {
+export default function QuesList({ handleAns, data: { question, correct_answer, incorrect_answers } }) {
     
     console.log(question)
+    
     const arr = [correct_answer, ...incorrect_answers].sort(()=> Math.random()-0.5);
     const c = {
 
@@ -18,7 +19,7 @@ export default function QuesList({ handleAns, data: { question, correct_answer, 
     return (
         <div>
             
-            <Confetti width={window.innerWidth}  height={window.innerHeight} opacity={val}/>
+            
             <div className="row">
                 <div className="col-12">
                     <div className="option">

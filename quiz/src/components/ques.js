@@ -10,6 +10,7 @@ export default function Ques() {
 
     
     const [ques, setQues] = useState([])
+    const [ans, setAns] = useState(0)
 
     useEffect(() => {
 
@@ -22,11 +23,16 @@ export default function Ques() {
 
         console.log(ques)
     }, [])
+    const handleAns = (ans) => {
 
+        //if answer received is correct, score is increased else decreased
+        
+        // and so is the index
+    }
     return ques.length > 0 ? (
         <div className="container">
             <Confetti width={window.innerWidth}  height={window.innerHeight} opacity={0}/>
-            <QuesList data={ques[0]}/>
+            <QuesList data={ques[0]} handleAns={handleAns}/>
 
             {/* 
             1.create an array of question 

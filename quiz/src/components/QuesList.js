@@ -1,8 +1,20 @@
 import React from "react";
 import "./ques.css"
-export default function QuesList({ data: { question, correct_answer, incorrect_answers } }) {
+
+
+export default function QuesList({ handleAns, data: { question, correct_answer, incorrect_answers } }) {
+    
     console.log(question)
-    const arr = [correct_answer, ...incorrect_answers];
+    const arr = [correct_answer, ...incorrect_answers].sort(()=> Math.random()-0.5);
+    const c = {
+
+        backgroundColor : "lightgreen"
+    }
+    const w = {
+
+        backgroundColor : "red"
+    }
+    
     return (
         <div>
             <div className="row">
@@ -21,9 +33,13 @@ export default function QuesList({ data: { question, correct_answer, incorrect_a
                 {
                     arr.map((element) => {
 
+    
+
                         return (
                         <div className="col-md-6" >
-                            <div className="option">
+                            <div className="option" onClick={()=> {
+                                handleAns(element)
+                            }} style={element === correct_answer ? c : w}>
                                 {element}
                             </div>
                         </div>)

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import QuesList from "./QuesList";
+import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
 
 import "./ques.css"
 
@@ -60,7 +61,10 @@ export default function Ques() {
             */}
         </div> 
     ): (
-        <h1>Loading..</h1>
+        <div className="main">
+            <img src={photo} height={window.innerHeight/2} width={window.innerWidth/3}/>
+        </div>
+       
     )
     
 }

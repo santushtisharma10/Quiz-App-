@@ -84,3 +84,6 @@ export default function Info() {
 
   )
 }
+
+// form styling to be modified
+// pass values to Ques component

@@ -64,7 +64,7 @@ export default function Ques() {
     )
     
 }
-// add confetti effect with score effect on perfect score
+
 // add an option to restart the game
 // styling needs to be improved
 // score card needs to generated

@@ -8,7 +8,7 @@
 }
 .tagline {
 
-  color: pink;
+  color: white;
 }
 
 .card1 {
@@ -32,15 +32,30 @@ margin: 2px;
   .glow {
     font-size: 120px;
     color: #FFFFFF;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb(255,182,193), 0 0 30px rgb(255,182,193), 0 0 40px rgb(255,182,193), 0 0 55px rgb(255,182,193), 0 0 75px rgb(255,182,193);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb(39, 192, 219), 0 0 30px rgb(39, 192, 219), 0 0 40px rgb(39, 192, 219), 0 0 55px rgb(39, 192, 219), 0 0 75px rgb(39, 192, 219);
     color: #FFFFFF;
     
     
    }
   
    button {
-     background-color: purple;
+     background-color: rgb(11, 124, 168);
      color: white;
      font-size: 25px;
     padding: 10px;
    }
+   .main-info {
+
+    display: flex;
+  justify-content: left;
+  
+  margin: 80px;
+
+   }
+   .info {
+
+    height: 400px;
+    width: auto;
+    padding: 50px;
+   }
+   

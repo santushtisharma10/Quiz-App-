@@ -3,14 +3,16 @@ import Confetti from "react-confetti";
 import QuesList from "./QuesList";
 import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
 import Score from "./Score";
+import Info from "./info";
 
 import "./ques.css"
 
 const url = "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"
 
+
 export default function Ques() {
 
-    
+    console.log(Info.num, Info.type, Info.diff)
     const [ques, setQues] = useState([])
     const [ans, setAns] = useState(0)
     const [index, setIndex] = useState(0)
@@ -56,10 +58,7 @@ export default function Ques() {
         <div className="container">
             
             <QuesList data={ques[index]} handleAns={handleAns} />
-            {/* 
-            1.create an array of question 
-            2. api example:https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple
-            */}
+            
         </div> 
     ): (
         <div className="main">
@@ -70,7 +69,6 @@ export default function Ques() {
     
 }
 
-// add an option to restart the game
 // styling needs to be improved
-// score card needs to generated
-// add timer option
+// take input from form to generate api
+// add timer option or peve/next which is to be selected by user

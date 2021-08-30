@@ -1,12 +1,35 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import {Redirect} from "react-router-dom";
 import Ques from "./ques";
-import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png"
+import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
 
 export default function Info() {
 
   {/* variables to store the info like category, type, number of questions, level*/ }
   {/*improve the page overall and add navigation to ques page */ }
-  var diff, catg, ques, type;
+  
+  const [type, setType] = useState("");
+  const [num, setNum] = useState("");
+  const [catg, setCat] = useState("");
+  const [diff, setDif] = useState("");
+  const [redirect, setRedirect] = useState(false);
+  const [data, setData] = useState([])
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+    console.log("Testing")
+    console.log(e.target.diff.value)
+    console.log(e.target.catg.value)
+    console.log(e.target.num.value)
+    console.log(e.target.type.value)
+
+    const ans = num;
+
+    e.target.submit();
+    
+
+  }
 
   return (
 
@@ -14,17 +37,17 @@ export default function Info() {
       <div className="col-md-6 ">
         <div className="main-info">
           <div className="card1 info">
-            <form action="http://localhost:3000/ques">
+            <form action="http://localhost:3000/ques" onSubmit={handleSubmit}>
 
-              <select name="difficulty">
-                <option selected data-default>Difficulty Level</option>
+              <select name="diff" value={diff} onChange={(e)=> setDif(e.target.value)} required>
+                <option value="" selected data-default>Difficulty Level</option>
                 <option value="easy">Easy</option>
                 <option value="med">Medium</option>
                 <option value="hard">Hard</option>
               </select>
               <br />
               <br />
-              <select name="category">
+              <select name="catg" value={catg} onChange={(e)=>setCat(e.target.value)} required>
                 <option value="" selected data-default>Category</option>
                 <option value="9">General Knowledge</option>
                 <option value="10">Entertainment: Books</option>
@@ -54,15 +77,15 @@ export default function Info() {
               </select>
               <br />
               <br />
-              <select>
-                <option selected data-default>Number of Questions</option>
-                <option value="">10</option>
-                <option value="">15</option>
+              <select name="num" value={num} onChange={(e)=>setNum(e.target.value)} required>
+                <option value="" selected data-default>Number of Questions</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
               </select>
               <br />
               <br />
 
-              <select name="type">
+              <select name="type" value={type} onChange={(e)=>setType(e.target.value)} required>
                 <option selected>type</option>
                 <option value="multiple">Multiple Choice</option>
                 <option value="boolean">True/False</option>
@@ -85,5 +108,4 @@ export default function Info() {
   )
 }
 
-// form styling to be modified
 // pass values to Ques component

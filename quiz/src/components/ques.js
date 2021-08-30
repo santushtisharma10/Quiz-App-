@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import QuesList from "./QuesList";
 import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
+import Score from "./Score";
 
 import "./ques.css"
 
@@ -49,7 +50,7 @@ export default function Ques() {
     }
 
     return end ? (<div>
-        <h2>End reached, Your score is {ans}</h2>
+        <Score ans={ans}/>
         <Confetti width={window.innerWidth}  height={window.innerHeight} />
     </div>) : ques.length > 0 ? (
         <div className="container">

@@ -1,35 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import {Redirect} from "react-router-dom";
 import Ques from "./ques";
 import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
+import {DataContext} from "../dataContext"
 
 export default function Info() {
 
-  {/* variables to store the info like category, type, number of questions, level*/ }
-  {/*improve the page overall and add navigation to ques page */ }
+ 
+  const {num, setNum, type, setType, catg, setCat, diff, setDif} = useContext(DataContext);
   
-  const [type, setType] = useState("");
-  const [num, setNum] = useState("");
-  const [catg, setCat] = useState("");
-  const [diff, setDif] = useState("");
-  const [redirect, setRedirect] = useState(false);
-  const [data, setData] = useState([])
-
+  //const [redirect, setRedirect] = useState(false);
+  //const [data, setData] = useState([])
+  
   const handleSubmit = (e) => {
 
     e.preventDefault();
-    console.log("Testing")
-    console.log(e.target.diff.value)
-    console.log(e.target.catg.value)
-    console.log(e.target.num.value)
-    console.log(e.target.type.value)
 
-    const ans = num;
-
-    e.target.submit();
+   console.log("Nubmer", num);
+   console.log("Type", type);
+   console.log("category", catg);
+   console.log("difficulty", diff)
+   e.target.submit();
     
 
   }
+ 
 
   return (
 
@@ -39,7 +34,7 @@ export default function Info() {
           <div className="card1 info">
             <form action="http://localhost:3000/ques" onSubmit={handleSubmit}>
 
-              <select name="diff" value={diff} onChange={(e)=> setDif(e.target.value)} required>
+              <select name="diff" value={diff} onChange={(e)=>setDif(e.target.value)} required>
                 <option value="" selected data-default>Difficulty Level</option>
                 <option value="easy">Easy</option>
                 <option value="med">Medium</option>
@@ -98,6 +93,7 @@ export default function Info() {
         </div>
 
       </div>
+    
       <div className="col-md-6">
 
         <img src={photo} height={window.innerHeight-50} width={window.innerWidth/2} />

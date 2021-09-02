@@ -4,6 +4,8 @@ import Card from './components/card';
 import Ques from './components/ques';
 import Info from './components/info';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {DataProv} from "./dataContext"
+
 function App() {
   
   
@@ -15,8 +17,9 @@ function App() {
 
   }, [vis])
   return (
-
+      
        <div>
+         <DataProv>
          <Router>
          <Switch>
          <Route path="/" exact component={Card}/>
@@ -24,9 +27,9 @@ function App() {
          <Route path="/ques" component={Ques}/>
          </Switch>
          </Router>
-         
+         </DataProv>
        </div>     
-    
+       
 
   );
 }

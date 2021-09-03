@@ -6,19 +6,16 @@ import Score from "./Score";
 import "./ques.css"
 import { DataContext } from "../dataContext";
 
-
-
-
 export default function Ques() {
 
-    const {num, setNum, type, setType, catg, setCat, diff, setDif} = useContext(DataContext);
+    const {num, type, catg, diff} = useContext(DataContext);
    
     console.log("Type", type)
-    console.log("num" ,num)
+    console.log("num", num)
     console.log("Category", catg)
     console.log("difficulty", diff)
     
-    const url = "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple"
+    const url = "https://opentdb.com/api.php?amount="+num+"&category="+catg+"&difficulty="+diff+"&type="+type
     console.log(url)
     const [ques, setQues] = useState([])
     const [ans, setAns] = useState(0)

@@ -1,30 +1,21 @@
-import React, { useState, useContext} from "react";
-import {Redirect} from "react-router-dom";
+import React, { useState, useContext } from "react";
 import Ques from "./ques";
 import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
-import {DataContext} from "../dataContext"
+import { DataContext } from "../dataContext"
 
 export default function Info() {
 
- 
-  const {num, setNum, type, setType, catg, setCat, diff, setDif} = useContext(DataContext);
-  
-  //const [redirect, setRedirect] = useState(false);
-  //const [data, setData] = useState([])
-  
+
+  const { num, setNum, type, setType, catg, setCat, diff, setDif } = useContext(DataContext);
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
 
-   console.log("Nubmer", num);
-   console.log("Type", type);
-   console.log("category", catg);
-   console.log("difficulty", diff)
-   e.target.submit();
-    
+    console.log(num, type, catg, diff);
 
+    //e.target.submit();
   }
- 
 
   return (
 
@@ -34,7 +25,7 @@ export default function Info() {
           <div className="card1 info">
             <form action="http://localhost:3000/ques" onSubmit={handleSubmit}>
 
-              <select name="diff" value={diff} onChange={(e)=>setDif(e.target.value)} required>
+              <select name="diff" value={diff} onChange={(e) => setDif(e.target.value)} required>
                 <option value="" selected data-default>Difficulty Level</option>
                 <option value="easy">Easy</option>
                 <option value="med">Medium</option>
@@ -42,7 +33,7 @@ export default function Info() {
               </select>
               <br />
               <br />
-              <select name="catg" value={catg} onChange={(e)=>setCat(e.target.value)} required>
+              <select name="catg" value={catg} onChange={(e) => setCat(e.target.value)} required>
                 <option value="" selected data-default>Category</option>
                 <option value="9">General Knowledge</option>
                 <option value="10">Entertainment: Books</option>
@@ -72,7 +63,7 @@ export default function Info() {
               </select>
               <br />
               <br />
-              <select name="num" value={num} onChange={(e)=>setNum(e.target.value)} required>
+              <select name="num" value={num} onChange={(e) => setNum(e.target.value)} required>
                 <option value="" selected data-default>Number of Questions</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -80,7 +71,7 @@ export default function Info() {
               <br />
               <br />
 
-              <select name="type" value={type} onChange={(e)=>setType(e.target.value)} required>
+              <select name="type" value={type} onChange={(e) => setType(e.target.value)} required>
                 <option selected>type</option>
                 <option value="multiple">Multiple Choice</option>
                 <option value="boolean">True/False</option>
@@ -93,10 +84,10 @@ export default function Info() {
         </div>
 
       </div>
-    
+
       <div className="col-md-6">
 
-        <img src={photo} height={window.innerHeight-50} width={window.innerWidth/2} />
+        <img src={photo} height={window.innerHeight - 50} width={window.innerWidth / 2} />
       </div>
 
     </div>

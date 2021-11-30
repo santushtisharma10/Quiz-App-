@@ -5,6 +5,7 @@ import Ques from './components/ques';
 import Info from './components/info';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { DataProvider } from "./dataContext"
+ 
 
 function App() {
 

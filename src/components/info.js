@@ -1,16 +1,19 @@
 import React, { useState, useContext } from "react";
 import Ques from "./ques";
 import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
-import { DataContext } from "../dataContext"
+//import { DataContext } from "../dataContext"
 
 export default function Info() {
 
 
-  const { num, setNum, type, setType, catg, setCat, diff, setDif } = useContext(DataContext);
+  const [num, setNum] = useState("")
+  const [type, setType] = useState("")
+  const [catg, setCat] = useState("")
+  const [diff, setDif ] = useState("");
 
   const handleSubmit = (e) => {
 
-    e.preventDefault();
+    //e.preventDefault();
 
     console.log(num, type, catg, diff);
 
@@ -26,7 +29,7 @@ export default function Info() {
             <form action="http://localhost:3000/ques" onSubmit={handleSubmit}>
 
               <select name="diff" value={diff} onChange={(e) => setDif(e.target.value)} required>
-                <option value="" selected data-default>Difficulty Level</option>
+                <option value="" data-default>Difficulty Level</option>
                 <option value="easy">Easy</option>
                 <option value="med">Medium</option>
                 <option value="hard">Hard</option>
@@ -34,7 +37,7 @@ export default function Info() {
               <br />
               <br />
               <select name="catg" value={catg} onChange={(e) => setCat(e.target.value)} required>
-                <option value="" selected data-default>Category</option>
+                <option value="" data-default>Category</option>
                 <option value="9">General Knowledge</option>
                 <option value="10">Entertainment: Books</option>
                 <option value="11">Entertainment: Films</option>

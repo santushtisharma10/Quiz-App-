@@ -4,8 +4,6 @@ import "./card.css"
 
 export default Card
 function Card({vis, setVis}) {
-  
-    
 
     return (
 

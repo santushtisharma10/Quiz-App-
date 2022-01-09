@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Card from './components/card';
 import Ques from './components/ques';
 import Info from './components/info';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { DataProvider } from "./dataContext"
  
 
@@ -11,16 +11,18 @@ function App() {
 
   return (
 
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Card />} />
+          <Route path="/info" element={<Info/>} />
+          <Route path="/ques" element={<Ques />}/>
+        </Routes>
+      </Router>
 
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Card} />
-        <DataProvider >
-          <Route path="/info" component={Info} />
-          <Route path="/ques" component={Ques} />
-        </DataProvider>
-      </Switch>
-    </Router>
+      
+    
+    </div>
 
 
   );

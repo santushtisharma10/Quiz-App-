@@ -4,11 +4,15 @@ import QuesList from "./QuesList";
 import photo from "./e8464bfc-80fd-4582-b18a-77c9508c7b69.png";
 import Score from "./Score";
 import "./ques.css"
-import { DataContext } from "../dataContext";
+//import { DataContext } from "../dataContext";
 
 export default function Ques() {
 
-    const {num, type, catg, diff} = useContext(DataContext);
+    //const {num, type, catg, diff} = useContext(DataContext);
+    const num = "10"  
+    const type = "multiple"
+    const catg = "21"
+    const diff = "hard"
    
     console.log("Type", type)
     console.log("num", num)
@@ -31,7 +35,7 @@ export default function Ques() {
                 setQues(data.results)
             })
 
-        console.log(ques)
+        console.log("Ques", ques)
     }, [])
 
     const handleAns = (answer) => {
@@ -66,6 +70,7 @@ export default function Ques() {
         </div>
     ) : (
         <div className="main">
+            <h1>Quiz Not Found</h1>
             <img src={photo} height={window.innerHeight / 2} width={window.innerWidth / 3} />
         </div>
 

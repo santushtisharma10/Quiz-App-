@@ -4,7 +4,7 @@ import Card from './components/card';
 import Ques from './components/ques';
 import Info from './components/info';
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { DataProvider } from "./dataContext"
+//import { DataProvider } from "./dataContext"
  
 
 function App() {
